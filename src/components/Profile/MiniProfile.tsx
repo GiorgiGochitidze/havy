@@ -1,6 +1,7 @@
 import { FaRegUserCircle } from "react-icons/fa";
 import MiniStats from "./MiniStats";
-import Goals from "./Goals";
+import Scheduled from "./Scheduled";
+import CalorieCard from "../Charts/Speedometer/CalorieCard";
 
 const MiniProfile = () => {
   return (
@@ -14,7 +15,20 @@ const MiniProfile = () => {
 
       <MiniStats />
 
-      <Goals />
+      <CalorieCard />
+
+      <div className="w-full h-auto flex flex-col justify-start items-start gap-4">
+        <p className="text-2xl">Scheduled</p>
+        <Scheduled imgUrl="/assets/pushup.png" trainingDay="Push" />
+        <Scheduled imgUrl="/assets/pull.png" trainingDay="Pull" />
+        <Scheduled imgUrl="/assets/leg.png" trainingDay="Leg + Core" />
+        <div className="w-full h-0.25 bg-(--text-secondary) my-5"></div>
+         <Scheduled imgUrl="/assets/pushup.png" trainingDay="Push" />
+        <Scheduled imgUrl="/assets/pull.png" trainingDay="Pull" />
+        <Scheduled imgUrl="/assets/leg.png" trainingDay="Leg + Core" />
+        <div className="w-full h-0.25 bg-(--text-secondary) my-5"></div>
+        <Scheduled imgUrl="/assets/rest.png" trainingDay="Rest" />
+      </div>
     </div>
   );
 };

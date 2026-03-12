@@ -3,16 +3,17 @@
 import { useEffect, useState } from "react";
 
 const workouts = [
-  { name: "Push-Ups", total: 26, goal: 26, color: "#08CB00" },
-  { name: "Bicep Curls", total: 30, goal: 30, color: "#00BFFF" },
-  { name: "Squats", total: 30, goal: 30, color: "#FF6B35" },
-  { name: "Lateral Raises", total: 30, goal: 30, color: "#C084FC" },
+  { name: "Push-Ups", total: 26, goal: 500, color: "#08CB00" },
+  { name: "Lateral Raises", total: 102, goal: 500, color: "#C084FC" },
+  { name: "Bicep Curls", total: 97, goal: 500, color: "#00BFFF" },
+  { name: "Squats", total: 30, goal: 500, color: "#FF6B35" },
+  { name: "Calve Rises", total: 60, goal: 500, color: "#FFD700" },
 ];
 
-const SIZE = 260;
+const SIZE = 300;
 const CENTER = SIZE / 2;
 const STROKE = 14;
-const GAP = 22;
+const GAP = 23;
 
 function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
   const rad = ((angleDeg - 90) * Math.PI) / 180;
@@ -50,7 +51,7 @@ const RadialChart = () => {
     <div className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 w-full flex items-center gap-6">
       <div className="text-center">
         <p className="text-sm mb-1.5 font-semibold text-gray-400 uppercase tracking-widest">
-          Today&apos;s Grind
+          Total Grind
         </p>
 
         <div className="relative" style={{ width: SIZE, height: SIZE }}>
