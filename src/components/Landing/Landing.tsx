@@ -1,6 +1,7 @@
 import { IoIosNotificationsOutline } from "react-icons/io";
 import Progress from "./Progress";
 import WeekDays from "./WeekDays";
+import RadialChart from "../Charts/Radial/RadialChart";
 
 const Landing = () => {
   return (
@@ -10,7 +11,10 @@ const Landing = () => {
         <IoIosNotificationsOutline size={30} />
       </div>
 
-      <WeekDays />
+      <div className="w-full h-auto flex-wrap flex items-stretch justify-start gap-5">
+        <WeekDays />
+        <RadialChart />
+      </div>
       <Progress />
     </div>
   );

@@ -6,7 +6,7 @@ import { BsPersonArmsUp } from "react-icons/bs";
 
 const Progress = () => {
   return (
-    <div className="w-full h-auto flex justify-between items-center gap-5">
+    <div className="w-full flex-wrap h-auto flex justify-between items-center gap-5">
       <ProgressCard
         name={"Biceps Curl"}
         amount={30}
