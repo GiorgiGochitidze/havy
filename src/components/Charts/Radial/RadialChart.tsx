@@ -48,7 +48,7 @@ const RadialChart = () => {
   const overallPct = Math.round((totalDone / totalGoal) * 100);
 
   return (
-    <div className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 w-full flex items-center gap-6">
+    <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.4)] p-6 w-full flex items-center gap-6">
       <div className="text-center">
         <p className="text-sm mb-1.5 font-semibold text-gray-400 uppercase tracking-widest">
           Total Grind

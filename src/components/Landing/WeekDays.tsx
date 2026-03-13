@@ -1,9 +1,9 @@
 const days = [
-  { short: "Mon", full: "Monday",    training: "Push", intensity: 0.9 },
-  { short: "Tue", full: "Tuesday",   training: "Pull", intensity: 0.7 },
+  { short: "Mon", full: "Monday",    training: "Pull", intensity: 0.9 },
+  { short: "Tue", full: "Tuesday",   training: "Push", intensity: 0.7 },
   { short: "Wed", full: "Wednesday", training: "Legs", intensity: 1.0 },
-  { short: "Thu", full: "Thursday",  training: "Push", intensity: 0.85 },
-  { short: "Fri", full: "Friday",    training: "Pull", intensity: 0.65 },
+  { short: "Thu", full: "Thursday",  training: "Pull", intensity: 0.85 },
+  { short: "Fri", full: "Friday",    training: "Push", intensity: 0.65 },
   { short: "Sat", full: "Saturday",  training: "Legs", intensity: 0.95 },
   { short: "Sun", full: "Sunday",    training: "Rest", intensity: 0.1 },
 ];
@@ -15,7 +15,7 @@ const WeekDays = () => {
   const todayIndex = today === 0 ? 6 : today - 1;
 
   return (
-    <div className="flex gap-2 bg-white p-4 rounded-2xl min-w-90 w-full shadow-[0_4px_20px_rgba(0,0,0,0.4)] items-end">
+    <div className="flex gap-2 bg-white p-4 rounded-2xl w-full shadow-[0_4px_20px_rgba(0,0,0,0.4)] items-end">
       {days.map((day, i) => {
         const isToday = i === todayIndex;
         const isRest = day.training === "Rest";
