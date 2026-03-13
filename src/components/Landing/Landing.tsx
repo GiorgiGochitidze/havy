@@ -2,7 +2,9 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import Progress from "./Progress";
 import WeekDays from "./WeekDays";
 import RadialChart from "../Charts/Radial/RadialChart";
-import CheckList from "./CheckList";
+import CheckList from "./Checklist/CheckList";
+import StreakCounter from "./Trackers/StreakCounter";
+import SleepTracker from "./Trackers/SleepTracker";
 
 const Landing = () => {
   return (
@@ -15,7 +17,11 @@ const Landing = () => {
       <div className="w-full h-auto flex-wrap flex items-stretch justify-start gap-5">
         <div className="w-full flex gap-5 items-start">
           <CheckList />
-          <WeekDays />
+          <div className="flex flex-col w-full gap-5">
+            <WeekDays />
+            <StreakCounter />
+            <SleepTracker />
+          </div>
         </div>
         <RadialChart />
       </div>
